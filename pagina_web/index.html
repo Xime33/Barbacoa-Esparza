@@ -419,7 +419,7 @@
       border-radius: var(--radius);
       overflow:hidden;
       box-shadow: 0 16px 40px rgba(0,0,0,.35);
-      border: 1px solid rgba(247,242,200,.16);
+      border: 1px solid rgba(66, 63, 32, 0.16);
       background: #fff;
     }
 
@@ -429,6 +429,26 @@
       color: rgba(247,242,200,.75);
       background: rgba(14,22,51,.55);
     }
+
+    /* Botones para fondos claros (Ubicación / Contacto) */
+    .btn-azul-cream{
+      background: var(--navy) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(21,32,68,.45) !important;
+      font-weight: 900;
+      border-radius: 18px;
+      padding: .70rem 1.05rem;
+      box-shadow: 0 10px 26px rgba(14,22,51,.22);
+    }
+
+    .btn-azul-cream:hover{
+      background: var(--navy2) !important;
+      color: var(--cream) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(14,22,51,.28);
+    }
+
+
   </style>
 </head>
 
@@ -498,9 +518,7 @@
         <div class="container wrap">
           <div class="banner-eyebrow">Tradición familiar</div>
           <h1 class="banner-title">Barbacoa Esparza</h1>
-          <p class="banner-sub">
-            Tacos suaves y dorados, consomé humeante, salsas y por kilo. Para comer aquí o para llevar.
-          </p>
+          
 
           <div class="banner-actions">
             <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" rel="noopener">
@@ -637,9 +655,9 @@
               </div>
 
               <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                <a class="btn btn-outline" href="https://www.google.com/maps/dir//Amanecer+Ranchero+42,+Benito+Ju%C3%A1rez,+57000+Cdad.+Nezahualc%C3%B3yotl,+M%C3%A9x." target="_blank" rel="noopener">
-                  Cómo llegar
-                </a>
+               <a class="btn btn-azul-cream" href="https://www.google.com/maps/dir//Amanecer+Ranchero+42,+Benito+Ju%C3%A1rez,+57000+Cdad.+Nezahualc%C3%B3yotl,+M%C3%A9x." target="_blank" rel="noopener">
+                  Cómo llegar </a>
+
                 <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" rel="noopener">
                   Preguntar
                 </a>
@@ -694,8 +712,10 @@
             </div>
             <div class="col-12 col-lg-5">
               <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-2">
-                <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" rel="noopener">Abrir Instagram</a>
-                <a class="btn btn-outline" href="mailto:barbacoa.esparza@gmail.com">Enviar correo</a>
+                <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" >Abrir Instagram</a>
+                <a class="btn btn-azul-cream" href="mailto:barbacoa.esparza@gmail.com"> Enviar correo </a>
+
+
               </div>
             </div>
           </div>
