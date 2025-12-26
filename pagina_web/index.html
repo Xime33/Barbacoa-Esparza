@@ -301,28 +301,55 @@
       .concept-collage .p2{ display:none; }
     }
 
-    /* ===== Menú ===== */
-    .menu-card{ padding: 22px; }
-    .menu-h{
+        /* ===== MENÚ EDITORIAL ===== */
+    .menu-editorial{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .menu-card-item{
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(30,43,87,.18);
+      border-radius: 20px;
+      padding: 26px 24px;
+      text-align: center;
+      box-shadow: 0 14px 34px rgba(0,0,0,.10);
+    }
+
+    .menu-card-item h4{
       font-family: Cinzel, serif;
       font-weight: 900;
-      letter-spacing: .5px;
+      letter-spacing: .4px;
+      color: var(--navy2);
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+
+    .menu-card-item p{
+      margin: 0;
+      font-size: 14px;
+      color: rgba(17,17,17,.62);
+      line-height: 1.6;
+    }
+
+    .menu-divider{
+      width: 36px;
+      height: 2px;
+      background: var(--navy);
+      margin: 12px auto;
+      border-radius: 2px;
+    }
+
+    /* Nota final */
+    .menu-note{
+      margin-top: 34px;
+      font-style: italic;
       text-align: center;
-      margin: 0 0 12px;
-      color: var(--ink);
+      color: rgba(17,17,17,.55);
+      font-size: 14px;
     }
-    .menu-list{ list-style:none; padding:0; margin:0; }
-    .menu-item{
-      display:flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 10px 2px;
-      border-top: 1px dashed rgba(30,43,87,.25);
-      align-items: baseline;
-    }
-    .menu-item:first-child{ border-top:none; }
-    .menu-item .name{ font-weight: 800; color: rgba(17,17,17,.92); }
-    .menu-item .price{ font-weight: 900; color: var(--ink); white-space: nowrap; }
+
 
     /* ===== Historia (oscuro) ===== */
     .awards{
@@ -550,58 +577,79 @@
         </div>
       </div>
     </section>
-
-    <!-- MENÚ -->
-    <section id="menu" class="section-cream" style="padding-top: 0;">
+    <!-- Menú --> 
+   <section id="menu" class="section-cream" style="padding-top: 0;">
       <div class="container wrap">
-        <div class="text-center mb-4">
+
+        <div class="text-center mb-5">
           <h2 class="section-title">Menú</h2>
-          <p class="section-desc">Mismo contenido que tu menú impreso.</p>
+          <p class="section-desc">
+            Cocina tradicional preparada cada domingo.
+          </p>
         </div>
 
-        <div class="row g-3">
-          <div class="col-12 col-lg-6">
-            <div class="card-paper menu-card h-100">
-              <div class="menu-h">Tacos y más…</div>
-              <ul class="menu-list">
-                <li class="menu-item"><span class="name">Suave</span><span class="price">$35</span></li>
-                <li class="menu-item"><span class="name">Dorado</span><span class="price">$35</span></li>
-                <li class="menu-item"><span class="name">Chilaquiles con barbacoa</span><span class="price">$85</span></li>
-              </ul>
+        <!-- TARJETAS -->
+        <div class="menu-editorial">
 
-              <div class="mt-4 menu-h">Consomé</div>
-              <ul class="menu-list">
-                <li class="menu-item"><span class="name">Plato</span><span class="price">$35</span></li>
-              </ul>
-            </div>
+          <div class="menu-card-item">
+            <h4>Suave</h4>
+            <div class="menu-divider"></div>
+            <p>Taco de barbacoa tradicional servido en tortilla caliente.</p>
           </div>
 
-          <div class="col-12 col-lg-6">
-            <div class="card-paper menu-card h-100">
-              <div class="menu-h">Por Kilo</div>
-              <ul class="menu-list">
-                <li class="menu-item"><span class="name">1kg de barbacoa</span><span class="price">$680</span></li>
-              </ul>
-
-              <div class="mt-4 menu-h">Bebidas</div>
-              <ul class="menu-list">
-                <li class="menu-item"><span class="name">Café de olla</span><span class="price">$20</span></li>
-                <li class="menu-item"><span class="name">Refresco</span><span class="price">$30</span></li>
-                <li class="menu-item"><span class="name">Agua de jamaica</span><span class="price">$25</span></li>
-              </ul>
-
-              <div class="mt-4 menu-h">Postres y Digestivos</div>
-              <ul class="menu-list">
-                <li class="menu-item"><span class="name">Flan</span><span class="price">$28</span></li>
-                <li class="menu-item"><span class="name">Pan de naranja</span><span class="price">$20</span></li>
-                <li class="menu-item"><span class="name">Carajillo (Licor 43)</span><span class="price">$90</span></li>
-              </ul>
-            </div>
+          <div class="menu-card-item">
+            <h4>Dorado</h4>
+            <div class="menu-divider"></div>
+            <p>Taco dorado al comal, crujiente y jugoso.</p>
           </div>
+
+          <div class="menu-card-item">
+            <h4>Chilaquiles</h4>
+            <div class="menu-divider"></div>
+            <p>Totopos bañados en salsa con barbacoa suave.</p>
+          </div>
+
+          <div class="menu-card-item">
+            <h4>Consomé</h4>
+            <div class="menu-divider"></div>
+            <p>Caldo caliente preparado con el jugo natural de la barbacoa.</p>
+          </div>
+
+          <div class="menu-card-item">
+            <h4>Barbacoa por kilo</h4>
+            <div class="menu-divider"></div>
+            <p>Ideal para compartir o llevar.</p>
+          </div>
+
+          <div class="menu-card-item">
+            <h4>Café de olla</h4>
+            <div class="menu-divider"></div>
+            <p>Preparado con piloncillo y canela.</p>
+          </div>
+
+          <div class="menu-card-item">
+            <h4>Postres</h4>
+            <div class="menu-divider"></div>
+            <p>Flan y pan de naranja artesanal.</p>
+          </div>
+
+          <div class="menu-card-item">
+            <h4>Digestivos</h4>
+            <div class="menu-divider"></div>
+            <p>Carajillo con Licor 43.</p>
+          </div>
+
         </div>
+
+        <!-- NOTA -->
+        <p class="menu-note">
+          Nuestro menú y disponibilidad pueden variar según el día.  
+          Pregunta por opciones del momento.
+        </p>
 
       </div>
-    </section>
+  </section>
+
 
     <!-- CONÓCENOS -->
     <section id="historia" class="awards">
