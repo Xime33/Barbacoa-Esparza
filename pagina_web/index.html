@@ -252,10 +252,11 @@
     .concept-collage .photo{
       position: absolute;
       overflow: hidden;
-      border-radius: 0;
+      border-radius: 20px;
       box-shadow: 0 18px 55px rgba(0,0,0,.18);
-      background: #fff;
-      border: 1px solid rgba(30,43,87,.12);
+      background: rgba(247,242,200,.85);
+      border: 0;
+      box-shadow: 0 16px 40px rgba(0,0,0,.10);
     }
     .concept-collage .photo img{
       width: 100%;
@@ -270,10 +271,11 @@
     .concept-collage .card{
       position: absolute;
       left: 52%;
-      top: 120px;
+      top: 200px;
       transform: translateX(-50%);
       width: min(560px, 92%);
       background: rgba(255,255,255,.94);
+      border-radius: 20px;
       border: 1px solid rgba(30,43,87,.12);
       box-shadow: 0 20px 60px rgba(0,0,0,.16);
       padding: 46px 44px;
@@ -392,7 +394,7 @@
     }
     .awards .imgbox{
       position: relative;
-      border-radius: 0;
+      border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 22px 60px rgba(0,0,0,.55);
       border: 1px solid rgba(247,242,200,.08);
@@ -416,6 +418,24 @@
       .awards .grid{ grid-template-columns: 1fr; }
       .awards .imgbox img{ height: 360px; }
     }
+      .awards .historia-texto{
+        justify-self: center;     /* centra el bloque dentro de la columna */
+        width: min(52ch, 100%);   /* ancho bonito, no pegado al borde */
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+    
+      @media (max-width: 576px){
+      .awards .historia-texto{
+        width: 100%;
+        text-align: left;
+        hyphens: none;
+        }
+    }
+
+
+
 
     /* ===== Galería ===== */
     .masonry{ column-count: 1; column-gap: 14px; }
@@ -551,12 +571,12 @@
             <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" rel="noopener">
               Pedir por Instagram
             </a>
-            <a class="btn btn-outline" href="mailto:barbacoa.esparza@gmail.com">
+            <a class="btn btn-outline" href="mailto:admin@barbacoaesparza.com.mx">
               Enviar correo
             </a>
           </div>
 
-          <div class="banner-hours-pill">Domingos · 8:00 – 15:00</div>
+          <div class="banner-hours-pill">Domingos · 9:00 – 15:00</div>
         </div>
       </div>
     </header>
@@ -600,13 +620,13 @@
           <div class="menu-card-item">
             <h4>Dorado</h4>
             <div class="menu-divider"></div>
-            <p>Taco dorado al comal, crujiente y jugoso.</p>
+            <p>Taco dorado, crujiente y jugoso.</p>
           </div>
 
           <div class="menu-card-item">
             <h4>Chilaquiles</h4>
             <div class="menu-divider"></div>
-            <p>Totopos bañados en salsa con barbacoa suave.</p>
+            <p>Totopos bañados en salsa verde con barbacoa suave.</p>
           </div>
 
           <div class="menu-card-item">
@@ -656,7 +676,7 @@
       <div class="container wrap">
         <div class="grid">
 
-          <div>
+          <div class = "historia-texto">
             <h2>Cocina con historia</h2>
             <p>
               En el corazón de la colonia Benito Juárez, en Ciudad Nezahualcóyotl, Barbacoa Esparza nació
@@ -712,7 +732,7 @@
               </div>
 
               <div class="mt-3" style="color: rgba(17,17,17,.70); font-weight:800;">
-                Horario: Domingos · 8:00 – 15:00
+                Horario: Domingos · 9:00 – 15:00
               </div>
             </div>
           </div>
@@ -737,17 +757,22 @@
         </div>
 
         <div class="masonry">
-          <div class="masonry-item"><img src="taco.jpeg" alt="Galería 1"></div>
-          <div class="masonry-item"><img src="Magueyes.jpg" alt="Galería 2"></div>
+          <div class="masonry-item"><img src="tacos.jpg" alt="Galería 5"></div>
           <div class="masonry-item"><img src="Borregos.jpg" alt="Galería 3"></div>
+          <div class="masonry-item"><img src="Magueyes.jpg" alt="Galería 2"></div>
+          
           <div class="masonry-item"><img src="logo.jpg" alt="Galería 4"></div>
+          <div class="masonry-item"><img src="taco.jpeg" alt="Galería 1"></div>
+          
+        
           <div class="masonry-item"><img src="chilaquiles.jpg" alt="Galería 5"></div>
+          
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section-cream" style="padding-top: 0;">
+    <section id="contacto" class="section-cream" style="padding-top: -1;">
       <div class="container wrap">
         <div class="card-paper p-4 p-md-5">
           <div class="row g-3 align-items-center">
@@ -755,13 +780,13 @@
               <h2 class="section-title">Contacto</h2>
               <p class="section-desc mb-0">
                 Instagram: <strong style="color: var(--navy2);">@barbacoa.esparza</strong><br>
-                Correo: <strong style="color: var(--navy2);">barbacoa.esparza@gmail.com</strong>
+                Correo: <strong style="color: var(--navy2);">admin@barbacoaesparza.com.mxm</strong>
               </p>
             </div>
             <div class="col-12 col-lg-5">
               <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-2">
                 <a class="btn btn-primary" href="https://instagram.com/barbacoa.esparza" target="_blank" >Abrir Instagram</a>
-                <a class="btn btn-azul-cream" href="mailto:barbacoa.esparza@gmail.com"> Enviar correo </a>
+                <a class="btn btn-azul-cream" href="mailto:admin@barbacoaesparza.com.mx"> Enviar correo </a>
 
 
               </div>
